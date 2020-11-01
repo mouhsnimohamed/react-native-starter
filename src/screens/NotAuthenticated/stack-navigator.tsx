@@ -1,11 +1,12 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-// import {RootStackParamList} from '~/root-navigator';
-
 import Signin from './Signin';
 import Signup from './Signup';
+import WarningScreen from '../WarningScreen';
 
-const Stack = createStackNavigator();
+import { RootStackParamList } from '../../navigations/RootNavigation';
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 interface NotAuthenticatedStackNavigatorProps {
   isSigningOut: boolean;
@@ -28,6 +29,7 @@ const NotAuthenticatedStackNavigator: React.FC<NotAuthenticatedStackNavigatorPro
         }}
       />
       <Stack.Screen name="Signup" component={Signup} />
+      <Stack.Screen name="Warning" component={WarningScreen} />
     </Stack.Navigator>
   );
 };

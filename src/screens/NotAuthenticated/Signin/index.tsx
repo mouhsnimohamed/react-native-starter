@@ -1,32 +1,69 @@
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import styled from 'styled-components/native';
-import { Text, Button, TextInput } from 'react-native';
+import { useDispatch } from 'react-redux';
 
-const Signin: React.FC = () => {
+import styled from 'styled-components/native';
+import {
+  Input,
+  PrimaryButton,
+  Logo,
+  LogoContainer,
+  AppBaseView,
+  SecondaryButton,
+  onInputChangeType,
+} from '../../../components';
+import { SignInAction } from '../../../modules/auth/auth.actions';
+import { RootStackParamList } from '../../../navigations/RootNavigation';
+
+type SigninScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'Signin'
+>;
+
+type Props = {
+  navigation: SigninScreenNavigationProp;
+};
+
+const Signin = ({ navigation }: Props) => {
+  const dispatch = useDispatch();
+
+  const signInHandle = () => {
+    dispatch(SignInAction('mail', '123456'));
+  };
+
+  const handleChange: onInputChangeType = (name, value) => {
+    console.log(name, value);
+  };
+
   return (
-    <Container>
-      <Text>Sign in Screen</Text>
-      <TextInput placeholder="user name" />
-      <TextInput
-        placeholder="password"
+    <AppBaseView>
+      <LogoContainer>
+        <Logo />
+      </LogoContainer>
+
+      <Input handleChange={handleChange} name="email" placeholder="Email" />
+
+      <Input
+        handleChange={handleChange}
+        name="password"
+        placeholder="Password"
         secureTextEntry={true}
-        placeholderTextColor="#9a73ef"
       />
-      <Button
-        onPress={() => {
-          alert('test');
-        }}
-        title="Sign in"
-      />
-    </Container>
+
+      <ActionContainer>
+        <PrimaryButton title="Se connecter" onPress={signInHandle} />
+        <SecondaryButton
+          title="Créer un compte"
+          onPress={() => navigation.navigate('Signup')}
+        />
+      </ActionContainer>
+    </AppBaseView>
   );
 };
 
-export const Container = styled.View`
-  flex: 1;
-  background-color: ${({ theme }) => theme.colors.background};
-  justify-content: center;
-  align-items: center;
+export const ActionContainer = styled.View`
+  margin-top: 40px;
+  align-self: stretch;
 `;
 
 export default Signin;

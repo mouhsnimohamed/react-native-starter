@@ -10,8 +10,8 @@ const initState: AuthState = {
 
 export function authReducer(state = initState, action: AuthActionstypes) {
   switch (action.type) {
-    case authActions.SIGNIN:
-      return state;
+    // case authActions.SIGNIN:
+    //   return state;
     case authActions.HANDLE_SPLASH:
       return { ...state, isLoading: false };
     case authActions.SIGNIN_SUCCESS:

@@ -2,26 +2,26 @@ import { DefaultTheme, ThemeProvider } from 'styled-components';
 
 const theme: DefaultTheme = {
   fontSize: {
-    TINY: 8,
-    SMALL: 12,
-    MEDIUM: 14,
-    LARGE: 18,
-    EXTRA_LARGE: 24,
-    MASSIVE: 34,
+    tiny: 8,
+    small: 12,
+    medium: 14,
+    large: 18,
+    extra_large: 24,
+    massive: 34,
   },
   fontFamily: {
-    PRIMARY: 'AvertaDemo-Regular',
-    PRIMARY_BOLD: 'AvertaDemo-ExtraBoldItalic',
-    SECONDARY: 'Product-Sans-Regular',
-    SECONDARY_ITALIC: 'Product-Sans-Italic',
+    primary: 'Open Sans',
+    secondary: 'arial',
   },
   colors: {
+    white: 'white',
     background: 'white',
     primary: '#003D7C',
     secondary: '#00B2BB',
     light: '#717171',
     text: '#4A4A4A',
     lightText: '#7F7F7F',
+    inputBackground: '#00000008',
   },
 };
 

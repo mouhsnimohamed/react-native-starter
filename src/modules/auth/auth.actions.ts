@@ -22,11 +22,11 @@ export const STORAGE_KEYS: StorageKeysTypes = {
 /* ### SignInAction ### */
 export const SignInAction = (
   email: string,
-  phone: string,
+  password: string,
 ): SignInActionType => ({
   type: authActions.SIGNIN,
   email,
-  phone,
+  password,
 });
 
 /* ### SignOutType ### */

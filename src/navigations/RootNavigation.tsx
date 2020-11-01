@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import {
+  NavigationContainer,
+  NavigationContainerRef,
+} from '@react-navigation/native';
 import { useDispatch } from 'react-redux';
 import { useTypedSelector } from '../redux/root.reducers';
 import { AUTH_REDUCER } from '../modules/auth/auth.reducer';
@@ -14,7 +17,13 @@ export type RootStackParamList = {
   Profile: undefined;
   Signin: undefined;
   Signup: undefined;
+  Warning: undefined;
 };
+
+/* create ren navigation => needed in redux action */
+const navigationRef: React.RefObject<
+  NavigationContainerRef
+> | null = React.createRef();
 
 const NavigatorView: React.FC = () => {
   const dispatch = useDispatch();
@@ -31,7 +40,7 @@ const NavigatorView: React.FC = () => {
   }
 
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       {isSignedIn ? (
         <AuthTabNavigator />
       ) : (
@@ -40,5 +49,10 @@ const NavigatorView: React.FC = () => {
     </NavigationContainer>
   );
 };
+
+/* use it in redux if needed */
+export function navigate(name: string, params?: any) {
+  navigationRef?.current?.navigate(name, params);
+}
 
 export default NavigatorView;

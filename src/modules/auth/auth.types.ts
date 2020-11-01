@@ -13,7 +13,7 @@ export interface AuthState {
 export interface SignInActionType {
   type: typeof authActions.SIGNIN;
   email: string;
-  phone: string;
+  password: string;
 }
 
 export interface SignOutType {

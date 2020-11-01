@@ -3,26 +3,26 @@ import 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
+      white: string;
       background: string;
       primary: string;
       light: string;
       secondary: string;
       text: string;
       lightText: string;
+      inputBackground: string;
     };
     fontSize: {
-      TINY: number;
-      SMALL: number;
-      MEDIUM: number;
-      LARGE: number;
-      EXTRA_LARGE: number;
-      MASSIVE: number;
+      tiny: number;
+      small: number;
+      medium: number;
+      large: number;
+      extra_large: number;
+      massive: number;
     };
     fontFamily: {
-      PRIMARY: string;
-      PRIMARY_BOLD: string;
-      SECONDARY: string;
-      SECONDARY_ITALIC: string;
+      primary: string;
+      secondary: string;
     };
   }
 }

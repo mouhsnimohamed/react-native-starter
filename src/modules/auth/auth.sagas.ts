@@ -6,6 +6,8 @@ import {
 } from './auth.actions';
 import { takeLatest, delay, put } from 'redux-saga/effects';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { SignInActionType } from './auth.types';
+import { navigate } from '../../navigations/RootNavigation';
 
 function* CheckAuthSaga() {
   try {
@@ -27,4 +29,18 @@ function* WatchCheckAuth() {
   yield takeLatest(authActions.CHECK_AUTH, CheckAuthSaga);
 }
 
-export default [WatchCheckAuth];
+function* SigninSaga(action: SignInActionType) {
+  try {
+    if (action.email && action.email) {
+      navigate('Warning');
+    }
+  } catch (error) {
+    console.log('somthing went wrong', error);
+  }
+}
+
+function* WatchSignin() {
+  yield takeLatest(authActions.SIGNIN, SigninSaga);
+}
+
+export default [WatchCheckAuth, WatchSignin];
