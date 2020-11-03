@@ -1,27 +1,26 @@
 import React from 'react';
-import { Text, Button } from 'react-native';
+import { AppBaseView, PrimaryText } from '../../../components';
+import { theme } from '../../../components/styles/theme';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../../../navigations/RootNavigation';
+import LogOut from '../../../components/LogOut';
 
-import { HomeProps } from './types';
+export interface HomeProps {
+  navigation: StackNavigationProp<RootStackParamList, 'Home'>;
+}
 
 const Home: React.FC<HomeProps> = ({ navigation }) => {
   return (
-    <Container>
-      <Text>Home Screen</Text>
-      <Button
-        onPress={() => navigation.navigate('Details', { id: 'abc-123' })}
-        title="Go to Details"
-      />
-    </Container>
+    <AppBaseView>
+      <PrimaryText isPrimary bold size={theme.fontSize.large}>
+        Welcome, you're in Home Screen
+      </PrimaryText>
+      <PrimaryText isSecondary bold>
+        Use navigation bellow or press on logout button
+      </PrimaryText>
+      <LogOut />
+    </AppBaseView>
   );
 };
 
 export default Home;
-
-import styled from 'styled-components/native';
-
-export const Container = styled.SafeAreaView`
-  flex: 1;
-  background-color: ${({ theme }) => theme.colors.background};
-  justify-content: center;
-  align-items: center;
-`;

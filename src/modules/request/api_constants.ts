@@ -1,3 +1,3 @@
-export const API_BASE = 'http://localhost:3000';
+export const API_BASE = 'https://5f9fdb94e21bab0016dfc6f4.mockapi.io';
 
-export const LOGIN_URL = '/auth/login';
+export const LOGIN_URL = '/auth-login';

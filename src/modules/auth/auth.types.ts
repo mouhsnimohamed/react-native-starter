@@ -8,16 +8,24 @@ export interface AuthState {
   isSignedIn: boolean;
   isSigningOut: boolean;
   isLoading: boolean;
+  token: string | undefined;
 }
+
+export type SignInPayloadTypes = {
+  email: string;
+  password: string;
+};
 
 export interface SignInActionType {
   type: typeof authActions.SIGNIN;
-  email: string;
-  password: string;
+  payload: SignInPayloadTypes;
 }
 
 export interface SignOutType {
   type: typeof authActions.SIGNOUT;
+}
+export interface SignOutSuccessType {
+  type: typeof authActions.SIGNIN_SUCCESS;
 }
 
 export interface CheckAuthType {
@@ -26,6 +34,7 @@ export interface CheckAuthType {
 
 export interface SignInSuccessActionType {
   type: typeof authActions.SIGNIN_SUCCESS;
+  token: string;
 }
 
 export interface HandleSplashActionType {

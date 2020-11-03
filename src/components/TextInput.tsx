@@ -1,3 +1,4 @@
+import React from 'react';
 import { Platform, TextInputProps } from 'react-native';
 import styled from 'styled-components/native';
 
@@ -16,6 +17,7 @@ const Input = ({ handleChange, name, placeholder, error, ...rest }: Props) => {
   };
   return (
     <TextInput
+      autoCapitalize={'none'}
       placeholder={placeholder}
       onChangeText={handleInputChange}
       {...rest}
@@ -28,7 +30,7 @@ export default Input;
 const TextInput = styled.TextInput`
   font-family: ${({ theme }) => theme.fontFamily.primary};
   height: 56px;
-  font-size: ${({ theme }) => theme.fontSize.medium};
+  font-size: ${({ theme }) => theme.fontSize.medium}px;
   color: ${({ theme }) => theme.colors.lightText};
   text-align: left;
   border: 0 solid ${({ theme }) => theme.colors.light};

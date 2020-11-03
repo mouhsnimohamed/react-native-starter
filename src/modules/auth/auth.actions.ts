@@ -2,6 +2,7 @@ import {
   CheckAuthType,
   SignInActionType,
   SignOutType,
+  SignOutSuccessType,
   SignInSuccessActionType,
   StorageKeysTypes,
   HandleSplashActionType,
@@ -10,6 +11,7 @@ import {
 export const authActions = {
   SIGNIN: 'AUTH_SIGNIN',
   SIGNOUT: 'AUTH_SIGNOUT',
+  SIGNOUT_SUCCESS: 'AUTH_SIGNOUT_SUCCESS',
   CHECK_AUTH: 'CHECK_AUTH',
   SIGNIN_SUCCESS: 'SIGNIN_SUCCESS',
   HANDLE_SPLASH: 'HANDLE_SPLASH',
@@ -20,18 +22,22 @@ export const STORAGE_KEYS: StorageKeysTypes = {
 };
 
 /* ### SignInAction ### */
-export const SignInAction = (
-  email: string,
-  password: string,
-): SignInActionType => ({
+export const SignInAction = (payload: {
+  email: string;
+  password: string;
+}): SignInActionType => ({
   type: authActions.SIGNIN,
-  email,
-  password,
+  payload,
 });
 
 /* ### SignOutType ### */
 export const SignOutAction = (): SignOutType => ({
   type: authActions.SIGNOUT,
+});
+
+/* ### SignOutSuccessType ### */
+export const SignOutSuccessAction = (): SignOutSuccessType => ({
+  type: authActions.SIGNOUT_SUCCESS,
 });
 
 /* ### CheckAuthType ### */
@@ -40,10 +46,14 @@ export const CheckAuthAction = (): CheckAuthType => ({
 });
 
 /* ### SignInSuccessAction ### */
-export const SignInSuccessAction = (): SignInSuccessActionType => ({
+export const SignInSuccessAction = (
+  token: string,
+): SignInSuccessActionType => ({
   type: authActions.SIGNIN_SUCCESS,
+  token,
 });
 
+/* ### HandleSplashAction ### */
 export const HandleSplashAction = (
   isLoading: boolean,
 ): HandleSplashActionType => ({

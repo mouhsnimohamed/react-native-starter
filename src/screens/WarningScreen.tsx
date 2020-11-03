@@ -44,6 +44,6 @@ const Title = styled.Text`
   font-family: ${({ theme }) => theme.fontFamily.primary};
   font-weight: 700;
   text-align: center;
-  font-size: ${({ theme }) => theme.fontSize.large};
+  font-size: ${({ theme }) => theme.fontSize.large}px;
   margin-bottom: 20px;
 `;

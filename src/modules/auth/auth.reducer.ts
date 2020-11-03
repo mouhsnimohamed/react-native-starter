@@ -6,16 +6,32 @@ const initState: AuthState = {
   isSignedIn: false,
   isSigningOut: false,
   isLoading: true,
+  token: undefined,
 };
 
 export function authReducer(state = initState, action: AuthActionstypes) {
   switch (action.type) {
-    // case authActions.SIGNIN:
-    //   return state;
     case authActions.HANDLE_SPLASH:
       return { ...state, isLoading: false };
     case authActions.SIGNIN_SUCCESS:
-      return { ...state, isSignedIn: true, isLoading: false };
+      return {
+        ...state,
+        isSignedIn: true,
+        isLoading: false,
+        token: action.token,
+      };
+    case authActions.SIGNOUT_SUCCESS:
+      return {
+        ...state,
+        isSignedIn: false,
+        isLoading: false,
+        token: undefined,
+        isSigningOut: true,
+        /* 
+        ! we use this just for animation transaction between screen
+        ? only when use logout  
+        */
+      };
     default:
       return state;
   }

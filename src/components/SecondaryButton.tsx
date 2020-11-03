@@ -16,7 +16,7 @@ export default SecondaryButton;
 const ButtonText = styled.Text`
   font-family: ${({ theme }) => theme.fontFamily.primary};
   color: ${({ theme }) => theme.colors.primary};
-  font-size: ${({ theme }) => theme.fontSize.large};
+  font-size: ${({ theme }) => theme.fontSize.large}px;
   text-align: center;
   text-decoration: underline;
   padding: 15px 0;

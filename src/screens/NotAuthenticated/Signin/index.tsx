@@ -1,5 +1,6 @@
 import { StackNavigationProp } from '@react-navigation/stack';
-import React from 'react';
+import React, { useState } from 'react';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { useDispatch } from 'react-redux';
 
 import styled from 'styled-components/native';
@@ -13,6 +14,7 @@ import {
   onInputChangeType,
 } from '../../../components';
 import { SignInAction } from '../../../modules/auth/auth.actions';
+import { SignInPayloadTypes } from '../../../modules/auth/auth.types';
 import { RootStackParamList } from '../../../navigations/RootNavigation';
 
 type SigninScreenNavigationProp = StackNavigationProp<
@@ -25,39 +27,45 @@ type Props = {
 };
 
 const Signin = ({ navigation }: Props) => {
+  const [inputs, setInputs] = useState<SignInPayloadTypes>({
+    email: '',
+    password: '',
+  });
   const dispatch = useDispatch();
 
   const signInHandle = () => {
-    dispatch(SignInAction('mail', '123456'));
+    dispatch(SignInAction(inputs));
   };
 
   const handleChange: onInputChangeType = (name, value) => {
-    console.log(name, value);
+    setInputs({ ...inputs, [name]: value.trim() });
   };
 
   return (
-    <AppBaseView>
-      <LogoContainer>
-        <Logo />
-      </LogoContainer>
+    <KeyboardAwareScrollView>
+      <AppBaseView>
+        <LogoContainer>
+          <Logo />
+        </LogoContainer>
 
-      <Input handleChange={handleChange} name="email" placeholder="Email" />
+        <Input handleChange={handleChange} name="email" placeholder="Email" />
 
-      <Input
-        handleChange={handleChange}
-        name="password"
-        placeholder="Password"
-        secureTextEntry={true}
-      />
-
-      <ActionContainer>
-        <PrimaryButton title="Se connecter" onPress={signInHandle} />
-        <SecondaryButton
-          title="Créer un compte"
-          onPress={() => navigation.navigate('Signup')}
+        <Input
+          handleChange={handleChange}
+          name="password"
+          placeholder="Password"
+          secureTextEntry={true}
         />
-      </ActionContainer>
-    </AppBaseView>
+
+        <ActionContainer>
+          <PrimaryButton title="Se connecter" onPress={signInHandle} />
+          <SecondaryButton
+            title="Créer un compte"
+            onPress={() => navigation.navigate('Signup')}
+          />
+        </ActionContainer>
+      </AppBaseView>
+    </KeyboardAwareScrollView>
   );
 };
 

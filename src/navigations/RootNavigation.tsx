@@ -13,14 +13,15 @@ import SplashScreen from '../screens/SplashScreen';
 
 export type RootStackParamList = {
   Home: undefined;
-  Details: { id: string | null };
-  Profile: undefined;
   Signin: undefined;
   Signup: undefined;
   Warning: undefined;
+  Settings: undefined;
+  Beneficiaries: undefined;
+  Transactions: { id: string | null };
 };
 
-/* create ren navigation => needed in redux action */
+/* create navigation => needed in redux action */
 const navigationRef: React.RefObject<
   NavigationContainerRef
 > | null = React.createRef();

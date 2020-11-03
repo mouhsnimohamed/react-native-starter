@@ -8,8 +8,8 @@ const Logo: React.FC = () => <Image source={logo} />;
 export default Logo;
 
 const Image = styled.Image`
-  width: 245;
-  height: 44.5;
+  width: 245px;
+  height: 44.5px;
 `;
 
 export const LogoContainer = styled.View`

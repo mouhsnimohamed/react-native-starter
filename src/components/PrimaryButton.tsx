@@ -32,7 +32,7 @@ const ButtonWrap = styled.View`
 const ButtonText = styled.Text`
   font-family: ${({ theme }) => theme.fontFamily.primary};
   color: ${({ theme }) => theme.colors.white};
-  font-size: ${({ theme }) => theme.fontSize.large};
+  font-size: ${({ theme }) => theme.fontSize.large}px;
   text-align: center;
   padding: 10px 30px;
   flex: 1;
