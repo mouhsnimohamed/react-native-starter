@@ -1,5 +1,6 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React, { useState } from 'react';
+import { StyleSheet } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { useDispatch } from 'react-redux';
 
@@ -16,6 +17,7 @@ import {
 import { SignInAction } from '../../../modules/auth/auth.actions';
 import { SignInPayloadTypes } from '../../../modules/auth/auth.types';
 import { RootStackParamList } from '../../../navigations/RootNavigation';
+import i18n from '../../../translations';
 
 type SigninScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
@@ -42,25 +44,32 @@ const Signin = ({ navigation }: Props) => {
   };
 
   return (
-    <KeyboardAwareScrollView>
+    <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       <AppBaseView>
         <LogoContainer>
           <Logo />
         </LogoContainer>
 
-        <Input handleChange={handleChange} name="email" placeholder="Email" />
+        <Input
+          handleChange={handleChange}
+          name="email"
+          placeholder={i18n.t('signin.email.placeholder')}
+        />
 
         <Input
           handleChange={handleChange}
           name="password"
-          placeholder="Password"
+          placeholder={i18n.t('signin.password.placeholder')}
           secureTextEntry={true}
         />
 
         <ActionContainer>
-          <PrimaryButton title="Se connecter" onPress={signInHandle} />
+          <PrimaryButton
+            title={i18n.t('signin.connect')}
+            onPress={signInHandle}
+          />
           <SecondaryButton
-            title="Créer un compte"
+            title={i18n.t('signin.creatAccount')}
             onPress={() => navigation.navigate('Signup')}
           />
         </ActionContainer>
@@ -73,5 +82,13 @@ export const ActionContainer = styled.View`
   margin-top: 40px;
   align-self: stretch;
 `;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: 'yellow',
+  },
+});
 
 export default Signin;
