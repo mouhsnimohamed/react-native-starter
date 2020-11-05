@@ -8,8 +8,8 @@ import {
   SecondaryButton,
   Input,
   onInputChangeType,
+  ActionContainer,
 } from '../../../components';
-import { ActionContainer } from '../Signin';
 import { RootStackParamList } from '../../../navigations/RootNavigation';
 import { ScrollView } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';

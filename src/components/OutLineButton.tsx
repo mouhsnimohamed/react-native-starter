@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 
 type disabled = boolean | undefined;
-interface PrimaryButtonType {
+interface OutLineButtonType {
   title: string;
   disabled?: disabled;
   onPress: (event: GestureResponderEvent) => void;
@@ -13,7 +13,7 @@ interface PrimaryButtonType {
 interface ButtonWrapType {
   disabled: disabled;
 }
-const PrimaryButton = ({ disabled, title, onPress }: PrimaryButtonType) => {
+const OutLineButton = ({ disabled, title, onPress }: OutLineButtonType) => {
   const handleOnPress = (e: GestureResponderEvent) => {
     if (disabled) return;
     onPress(e);
@@ -27,12 +27,12 @@ const PrimaryButton = ({ disabled, title, onPress }: PrimaryButtonType) => {
   );
 };
 
-export default PrimaryButton;
+export default OutLineButton;
 
 const ButtonWrap = styled.View<ButtonWrapType>`
-  background-color: ${({ theme, disabled }) =>
-    disabled ? theme.colors.light : theme.colors.primary};
-  opacity: ${({ disabled }) => (disabled ? '0.8' : 1)};
+  background-color: transparent;
+  border-width: 1px;
+  border-color: ${({ theme }) => theme.colors.primary};
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@ const ButtonWrap = styled.View<ButtonWrapType>`
 
 const ButtonText = styled.Text`
   font-family: ${({ theme }) => theme.fontFamily.primary};
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSize.medium}px;
   text-align: center;
   padding: 10px 30px;

@@ -12,9 +12,11 @@
       "placeholder": "Mot de passe"
     },
     "email": {
-      "placeholder": "Votre mail"
+      "placeholder": "Votre e-mail"
     },
     "connect": "Se connecter",
-    "creatAccount": "Créer un compte"
+    "register": "M’enregistrer",
+    "createAccount": "Créer un nouveau compte",
+    "activateAccount": "Activer mon compte"
   }
 }

@@ -1,10 +1,12 @@
-import { Platform } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
+import React from 'react';
 import styled from 'styled-components/native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 const AppBaseView = styled.View`
-  background: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.background};
   flex: 1;
-  padding: 20px;
+  padding: 25px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -12,9 +14,34 @@ const AppBaseView = styled.View`
 `;
 
 const AppSafeAreaView = styled.SafeAreaView`
-  background: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.background};
   flex: 1;
-  padding: 20px;
+  padding: 25px;
 `;
 
-export { AppSafeAreaView, AppBaseView };
+const ActionContainer = styled.View`
+  margin-top: 30px;
+  align-self: stretch;
+`;
+
+const StyledKeyboardAwareScrollView = ({ children }: any) => {
+  return (
+    <KeyboardAwareScrollView contentContainerStyle={styles.container}>
+      {children}
+    </KeyboardAwareScrollView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+});
+
+export {
+  AppSafeAreaView,
+  AppBaseView,
+  StyledKeyboardAwareScrollView,
+  ActionContainer,
+};

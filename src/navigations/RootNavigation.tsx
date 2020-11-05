@@ -15,6 +15,7 @@ export type RootStackParamList = {
   Home: undefined;
   Signin: undefined;
   Signup: undefined;
+  PreActivateAccount: undefined;
   Warning: undefined;
   Settings: undefined;
   Beneficiaries: undefined;

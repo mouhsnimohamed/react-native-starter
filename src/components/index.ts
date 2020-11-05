@@ -3,7 +3,13 @@ import Input, { onInputChangeType } from './TextInput';
 import PrimaryButton from './PrimaryButton';
 import SecondaryButton from './SecondaryButton';
 import PrimaryText from './PrimaryText';
-import { AppBaseView, AppSafeAreaView } from './AppBase';
+import OutLineButton from './OutLineButton';
+import {
+  AppBaseView,
+  AppSafeAreaView,
+  StyledKeyboardAwareScrollView,
+  ActionContainer,
+} from './AppBase';
 import Logo, { LogoContainer } from './Logo';
 
 export {
@@ -11,11 +17,14 @@ export {
   Spinner,
   Input,
   PrimaryText,
+  OutLineButton,
   PrimaryButton,
   LogoContainer,
   AppBaseView,
   SecondaryButton,
   AppSafeAreaView,
+  StyledKeyboardAwareScrollView,
+  ActionContainer,
 };
 
 export type { onInputChangeType };

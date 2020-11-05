@@ -29,7 +29,7 @@ export default Input;
 
 const TextInput = styled.TextInput`
   font-family: ${({ theme }) => theme.fontFamily.primary};
-  height: 56px;
+  height: 52px;
   font-size: ${({ theme }) => theme.fontSize.medium}px;
   color: ${({ theme }) => theme.colors.lightText};
   text-align: left;
@@ -37,7 +37,7 @@ const TextInput = styled.TextInput`
   border-bottom-width: ${Platform.OS === 'ios' ? '2px' : '1px'};
   border-bottom-color: ${({ theme }) => theme.colors.light};
   background-color: ${({ theme }) => theme.colors.inputBackground};
-  padding: 13px 10px;
+  padding: 12px 10px;
   border-radius: 4px;
   width: 100%;
   margin-bottom: 20px;

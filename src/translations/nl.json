@@ -9,10 +9,10 @@
   },
   "signin": {
     "password": {
-      "placeholder": "Mot de passe"
+      "placeholder": "Wachtwoord"
     },
     "email": {
-      "placeholder": "Votre mail"
+      "placeholder": "Jouw email"
     },
     "connect": "Se connecter",
     "creatAccount": "Créer un compte"

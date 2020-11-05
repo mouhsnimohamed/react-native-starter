@@ -9,10 +9,10 @@
   },
   "signin": {
     "password": {
-      "placeholder": "Mot de passe"
+      "placeholder": "Contraseña"
     },
     "email": {
-      "placeholder": "Votre mail"
+      "placeholder": "Su email"
     },
     "connect": "Se connecter",
     "creatAccount": "Créer un compte"

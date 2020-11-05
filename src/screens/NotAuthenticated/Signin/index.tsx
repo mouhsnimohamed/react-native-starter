@@ -1,10 +1,7 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React, { useState } from 'react';
-import { StyleSheet } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { useDispatch } from 'react-redux';
 
-import styled from 'styled-components/native';
 import {
   Input,
   PrimaryButton,
@@ -13,6 +10,8 @@ import {
   AppBaseView,
   SecondaryButton,
   onInputChangeType,
+  StyledKeyboardAwareScrollView,
+  ActionContainer,
 } from '../../../components';
 import { SignInAction } from '../../../modules/auth/auth.actions';
 import { SignInPayloadTypes } from '../../../modules/auth/auth.types';
@@ -43,8 +42,13 @@ const Signin = ({ navigation }: Props) => {
     setInputs({ ...inputs, [name]: value.trim() });
   };
 
+  /* ### NAVIGATE TO PreActivateAccount ### */
+  const navigateToPreActivateAccount = () => {
+    navigation.navigate('PreActivateAccount');
+  };
+
   return (
-    <KeyboardAwareScrollView contentContainerStyle={styles.container}>
+    <StyledKeyboardAwareScrollView>
       <AppBaseView>
         <LogoContainer>
           <Logo />
@@ -69,26 +73,13 @@ const Signin = ({ navigation }: Props) => {
             onPress={signInHandle}
           />
           <SecondaryButton
-            title={i18n.t('signin.creatAccount')}
-            onPress={() => navigation.navigate('Signup')}
+            title={i18n.t('signin.register')}
+            onPress={navigateToPreActivateAccount}
           />
         </ActionContainer>
       </AppBaseView>
-    </KeyboardAwareScrollView>
+    </StyledKeyboardAwareScrollView>
   );
 };
-
-export const ActionContainer = styled.View`
-  margin-top: 40px;
-  align-self: stretch;
-`;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: 'yellow',
-  },
-});
 
 export default Signin;
