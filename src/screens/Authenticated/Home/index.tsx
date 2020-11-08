@@ -1,9 +1,8 @@
 import React from 'react';
-import { AppBaseView, PrimaryText } from '../../../components';
-import { theme } from '../../../components/styles/theme';
+import { AppBaseView, PrimaryText, LogOut } from 'components';
+import { theme } from 'components/styles/theme';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../../navigations/RootNavigation';
-import LogOut from '../../../components/LogOut';
+import { RootStackParamList } from 'navigations/RootNavigation';
 
 export interface HomeProps {
   navigation: StackNavigationProp<RootStackParamList, 'Home'>;

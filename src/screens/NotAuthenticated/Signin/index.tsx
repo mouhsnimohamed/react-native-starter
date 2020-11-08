@@ -12,11 +12,11 @@ import {
   onInputChangeType,
   StyledKeyboardAwareScrollView,
   ActionContainer,
-} from '../../../components';
-import { SignInAction } from '../../../modules/auth/auth.actions';
-import { SignInPayloadTypes } from '../../../modules/auth/auth.types';
-import { RootStackParamList } from '../../../navigations/RootNavigation';
-import i18n from '../../../translations';
+} from 'components';
+import { SignInAction } from 'modules/auth/auth.actions';
+import { SignInPayloadTypes } from 'modules/auth/auth.types';
+import { RootStackParamList } from 'navigations/RootNavigation';
+import i18n from 'translations';
 
 type SigninScreenNavigationProp = StackNavigationProp<
   RootStackParamList,

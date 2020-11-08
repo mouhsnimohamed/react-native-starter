@@ -8,7 +8,7 @@ import {
 import { takeLatest, put, call } from 'redux-saga/effects';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SignInActionType } from './auth.types';
-import { navigate } from '../../navigations/RootNavigation';
+import { navigate } from 'navigations/RootNavigation';
 import request from '../request';
 import { LOGIN_URL } from '../request/api_constants';
 

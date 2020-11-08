@@ -5,7 +5,7 @@ import Signup from './Signup';
 import PreActivateAccountScreen from './Signin/PreActivateAccount';
 import WarningScreen from './WarningScreen';
 
-import { RootStackParamList } from '../../navigations/RootNavigation';
+import { RootStackParamList } from 'navigations/RootNavigation';
 
 const Stack = createStackNavigator<RootStackParamList>();
 

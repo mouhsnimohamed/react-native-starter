@@ -9,8 +9,8 @@ import {
   Input,
   onInputChangeType,
   ActionContainer,
-} from '../../../components';
-import { RootStackParamList } from '../../../navigations/RootNavigation';
+} from 'components';
+import { RootStackParamList } from 'navigations/RootNavigation';
 import { ScrollView } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 

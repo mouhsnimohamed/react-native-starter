@@ -1,4 +1,4 @@
-import authSagas from '../modules/auth/auth.sagas';
+import authSagas from 'modules/auth/auth.sagas';
 
 const rootSagas = [...authSagas];
 

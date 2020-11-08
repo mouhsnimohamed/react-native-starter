@@ -1,6 +1,5 @@
 import React from 'react';
-import { AppBaseView, PrimaryText } from '../../../components';
-import LogOut from '../../../components/LogOut';
+import { AppBaseView, PrimaryText, LogOut } from 'components';
 
 const Beneficiaries = () => {
   return (

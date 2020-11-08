@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { RootStackParamList } from '../../navigations/RootNavigation';
+import { RootStackParamList } from 'navigations/RootNavigation';
 import tabNavigationData from './buttom-tab-data';
 import styled from 'styled-components/native';
 

@@ -9,9 +9,9 @@ import {
   LogoContainer,
   AppBaseView,
   ActionContainer,
-} from '../../../components';
-import { RootStackParamList } from '../../../navigations/RootNavigation';
-import i18n from '../../../translations';
+} from 'components';
+import { RootStackParamList } from 'navigations/RootNavigation';
+import i18n from 'translations';
 
 type SigninScreenNavigationProp = StackNavigationProp<
   RootStackParamList,

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { Logo } from '../components';
+import { Logo } from 'components';
 
 const SplashScreen: React.FC = () => {
   return (

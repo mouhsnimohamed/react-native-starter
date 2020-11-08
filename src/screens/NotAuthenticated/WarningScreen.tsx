@@ -1,10 +1,10 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
 import styled from 'styled-components/native';
-import { AppBaseView, SecondaryButton } from '../../components';
-import { RootStackParamList } from '../../navigations/RootNavigation';
+import { AppBaseView, SecondaryButton } from 'components';
+import { RootStackParamList } from 'navigations/RootNavigation';
 
-const icon = require('../../assets/images/info.png');
+const icon = require('assets/images/info.png');
 
 type WarningScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
