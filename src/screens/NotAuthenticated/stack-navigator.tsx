@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Signin from './Signin';
 import Signup from './Signup';
 import PreActivateAccountScreen from './Signin/PreActivateAccount';
+import ActivateAccountScreen from './ActivateAccount';
 import WarningScreen from './WarningScreen';
 
 import { RootStackParamList } from 'navigations/RootNavigation';
@@ -35,6 +36,7 @@ const NotAuthenticatedStackNavigator: React.FC<NotAuthenticatedStackNavigatorPro
         name="PreActivateAccount"
         component={PreActivateAccountScreen}
       />
+      <Stack.Screen name="ActivateAccount" component={ActivateAccountScreen} />
     </Stack.Navigator>
   );
 };

@@ -1,0 +1,20 @@
+{
+  "appName": "BMCE Euro Service",
+  "navigation": {
+    "home": "Home",
+    "settings": "Settings"
+  },
+  "home": {
+    "welcome": "Welcome to %{appName}!"
+  },
+  "signin": {
+    "password": {
+      "placeholder": "Parola d'ordine"
+    },
+    "email": {
+      "placeholder": "La tua mail"
+    },
+    "connect": "Se connecter",
+    "creatAccount": "Créer un compte"
+  }
+}

@@ -12,11 +12,14 @@ import {
   onInputChangeType,
   StyledKeyboardAwareScrollView,
   ActionContainer,
+  Spinner,
 } from 'components';
 import { SignInAction } from 'modules/auth/auth.actions';
 import { SignInPayloadTypes } from 'modules/auth/auth.types';
 import { RootStackParamList } from 'navigations/RootNavigation';
 import i18n from 'translations';
+import { useTypedSelector } from 'redux/root.reducers';
+import { AUTH_REDUCER } from 'modules/auth/auth.reducer';
 
 type SigninScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
@@ -47,9 +50,12 @@ const Signin = ({ navigation }: Props) => {
     navigation.navigate('PreActivateAccount');
   };
 
+  const { isLoading } = useTypedSelector((state) => state[AUTH_REDUCER]);
+
   return (
     <StyledKeyboardAwareScrollView>
       <AppBaseView>
+        <Spinner isLoading={isLoading} />
         <LogoContainer>
           <Logo />
         </LogoContainer>

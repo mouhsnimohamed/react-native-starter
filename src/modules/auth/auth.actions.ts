@@ -6,15 +6,17 @@ import {
   SignInSuccessActionType,
   StorageKeysTypes,
   HandleSplashActionType,
+  SignInFailerActionType,
 } from './auth.types';
 
 export const authActions = {
   SIGNIN: 'AUTH_SIGNIN',
   SIGNOUT: 'AUTH_SIGNOUT',
   SIGNOUT_SUCCESS: 'AUTH_SIGNOUT_SUCCESS',
-  CHECK_AUTH: 'CHECK_AUTH',
-  SIGNIN_SUCCESS: 'SIGNIN_SUCCESS',
-  HANDLE_SPLASH: 'HANDLE_SPLASH',
+  CHECK_AUTH: 'AUTH_CHECK_AUTH',
+  SIGNIN_SUCCESS: 'AUTH_SIGNIN_SUCCESS',
+  SIGNIN_FAILER: 'AUTH_SIGNIN_FAILER',
+  HANDLE_SPLASH: 'AUTH_HANDLE_SPLASH',
 };
 
 export const STORAGE_KEYS: StorageKeysTypes = {
@@ -53,10 +55,15 @@ export const SignInSuccessAction = (
   token,
 });
 
+/* ### SignInSuccessAction ### */
+export const SignInFailerAction = (): SignInFailerActionType => ({
+  type: authActions.SIGNIN_FAILER,
+});
+
 /* ### HandleSplashAction ### */
 export const HandleSplashAction = (
-  isLoading: boolean,
+  isChecking: boolean,
 ): HandleSplashActionType => ({
   type: authActions.HANDLE_SPLASH,
-  isLoading,
+  isChecking,
 });

@@ -24,11 +24,11 @@ type Props = {
 
 const PreActivateAccount = ({ navigation }: Props) => {
   const navigateToActivateAccount = () => {
-    Alert.alert('activate');
+    navigation.navigate('ActivateAccount');
   };
 
   const navigateToCreateAccount = () => {
-    Alert.alert('create');
+    navigation.navigate('Signup');
   };
 
   return (
@@ -40,7 +40,7 @@ const PreActivateAccount = ({ navigation }: Props) => {
       <ActionContainer>
         <PrimaryButton
           title={i18n.t('signin.createAccount')}
-          onPress={navigateToActivateAccount}
+          onPress={navigateToCreateAccount}
         />
         <OutLineButton
           title={i18n.t('signin.activateAccount')}

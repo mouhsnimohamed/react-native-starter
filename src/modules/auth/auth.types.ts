@@ -8,6 +8,7 @@ export interface AuthState {
   isSignedIn: boolean;
   isSigningOut: boolean;
   isLoading: boolean;
+  isChecking: boolean;
   token: string | undefined;
 }
 
@@ -37,9 +38,13 @@ export interface SignInSuccessActionType {
   token: string;
 }
 
+export interface SignInFailerActionType {
+  type: typeof authActions.SIGNIN_FAILER;
+}
+
 export interface HandleSplashActionType {
   type: typeof authActions.HANDLE_SPLASH;
-  isLoading: boolean;
+  isChecking: boolean;
 }
 
 export type AuthActionstypes =
@@ -47,4 +52,5 @@ export type AuthActionstypes =
   | SignOutType
   | CheckAuthType
   | SignInSuccessActionType
+  | SignInFailerActionType
   | HandleSplashActionType;

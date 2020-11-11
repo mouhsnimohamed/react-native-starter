@@ -16,6 +16,7 @@ export type RootStackParamList = {
   Signin: undefined;
   Signup: undefined;
   PreActivateAccount: undefined;
+  ActivateAccount: undefined;
   Warning: undefined;
   Settings: undefined;
   Beneficiaries: undefined;
@@ -29,7 +30,7 @@ const navigationRef: React.RefObject<
 
 const NavigatorView: React.FC = () => {
   const dispatch = useDispatch();
-  const { isSignedIn, isSigningOut, isLoading } = useTypedSelector(
+  const { isSignedIn, isSigningOut, isChecking } = useTypedSelector(
     (state) => state[AUTH_REDUCER],
   );
 
@@ -37,7 +38,7 @@ const NavigatorView: React.FC = () => {
     dispatch(CheckAuthAction());
   }, [dispatch]);
 
-  if (isLoading) {
+  if (isChecking) {
     return <SplashScreen />;
   }
 

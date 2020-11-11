@@ -22,6 +22,7 @@ const theme: DefaultTheme = {
     text: '#4A4A4A',
     lightText: '#7F7F7F',
     inputBackground: '#00000008',
+    modalBackground: 'rgba(255,255,255,0.3)',
   },
 };
 

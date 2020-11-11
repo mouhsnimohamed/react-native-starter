@@ -11,6 +11,7 @@ declare module 'styled-components' {
       text: string;
       lightText: string;
       inputBackground: string;
+      modalBackground: string;
     };
     fontSize: {
       tiny: number;
