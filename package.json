@@ -9,11 +9,11 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "clean:android": "cd android && ./gradlew clean && cd ../",
-    "clean:ios": "cd ios && xcodebuild clean && cd ../"
+    "clean:ios": "cd ios && xcodebuild clean && cd ../",
+    "build:dev": "mkdir -p android/app/src/main/assets && rm -rf android/app/build && npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android && ./gradlew clean assembleRelease && cd ../"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.13.1",
-    "@react-native-community/cli-platform-android": "4.13.0",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/bottom-tabs": "5.10.0",
     "@react-navigation/native": "5.7.6",
