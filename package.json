@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "start:reset": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "clean:android": "cd android && ./gradlew clean && cd ../",
@@ -28,6 +29,7 @@
     "react": "16.13.1",
     "react-content-loader": "5.1.4",
     "react-native": "0.63.3",
+    "react-native-country-picker-modal": "2.0.0",
     "react-native-gesture-handler": "1.8.0",
     "react-native-keyboard-aware-scroll-view": "0.9.3",
     "react-native-localize": "1.4.3",
@@ -81,6 +83,7 @@
     "@react-native-community/cli": "^2.6.0",
     "@react-native-community/cli-tools": "^2.8.3",
     "@react-native-community/cli-platform-android": "^2.8.3",
-    "@react-native-community/cli-platform-ios": "^2.8.3"
+    "@react-native-community/cli-platform-ios": "^2.8.3",
+    "metro-config": "bluelovers/metro-config-hotfix-0.56.x"
   }
 }

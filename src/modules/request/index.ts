@@ -3,6 +3,10 @@ import { API_BASE } from './api_constants';
 
 const client = axios.create({
   baseURL: API_BASE,
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json; charset=utf-8',
+  },
 });
 
 /**

@@ -53,6 +53,7 @@ function* SigninSaga(action: SignInActionType) {
       yield put(SignInFailerAction());
       navigate('Warning');
     } else {
+      console.log('############# REQUEST ');
       const result = yield call(request, {
         url: LOGIN_URL,
         method: 'POST',
@@ -63,7 +64,8 @@ function* SigninSaga(action: SignInActionType) {
       yield handleSignIn('USER_FAKE_TOKEN');
     }
   } catch (error) {
-    console.log('somthing went wrong', error);
+    console.log('somthing went wrong......', error);
+    yield SignInFailerAction();
   }
 }
 
