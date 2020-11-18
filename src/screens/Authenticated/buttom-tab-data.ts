@@ -2,6 +2,7 @@ import HomeScreen from './Home';
 import TransactionsScreen from './Transactions';
 import BeneficiariessScreen from './Beneficiaries';
 import SettingsScreen from './Settings';
+import { RootStackParamList } from '../../navigations/RootNavigation';
 
 const iconHome = require('assets/images/homeIcon.png');
 const iconBeneficiaries = require('assets/images/beneficiaries.png');
@@ -10,22 +11,22 @@ const iconSettings = require('assets/images/settings.png');
 
 const tabNavigationData = [
   {
-    name: 'Home',
+    name: RootStackParamList.Home,
     component: HomeScreen,
     icon: iconHome,
   },
   {
-    name: 'Transactions',
+    name: RootStackParamList.Transactions,
     component: TransactionsScreen,
     icon: iconTransactions,
   },
   {
-    name: 'Beneficiaries',
+    name: RootStackParamList.Beneficiaries,
     component: BeneficiariessScreen,
     icon: iconBeneficiaries,
   },
   {
-    name: 'Settings',
+    name: RootStackParamList.Settings,
     component: SettingsScreen,
     icon: iconSettings,
   },

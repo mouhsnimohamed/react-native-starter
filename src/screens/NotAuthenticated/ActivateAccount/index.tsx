@@ -1,18 +1,16 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-
 import {
-  PhoneInputText,
-  PrimaryButton,
+  ActionContainer,
+  AppBaseView,
   Logo,
   LogoContainer,
-  AppBaseView,
-  SecondaryButton,
   onInputChangeType,
-  StyledKeyboardAwareScrollView,
-  ActionContainer,
+  PhoneInputText,
+  PrimaryButton,
+  SecondaryButton,
   Spinner,
+  StyledKeyboardAwareScrollView,
 } from 'components';
 // import { SignInAction } from 'modules/auth/auth.actions';
 import { SignInPayloadTypes } from 'modules/auth/auth.types';
@@ -21,6 +19,7 @@ import i18n from 'translations';
 import { useTypedSelector } from 'redux/root.reducers';
 import { AUTH_REDUCER } from 'modules/auth/auth.reducer';
 import { Alert } from 'react-native';
+// import { useDispatch } from 'react-redux';
 
 type ActivateAccountScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
