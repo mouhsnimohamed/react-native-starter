@@ -24,6 +24,7 @@ function* handleSignIn(token: string) {
 
 function* CheckAuthSaga() {
   try {
+    yield delay(10000);
     const token = yield AsyncStorage.getItem(STORAGE_KEYS.TOKEN);
     if (token === null) {
       yield put(HandleSplashAction(false));
