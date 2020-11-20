@@ -1,14 +1,13 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import { Alert } from 'react-native';
 
 import {
-  OutLineButton,
-  PrimaryButton,
+  ActionContainer,
+  AppBaseView,
   Logo,
   LogoContainer,
-  AppBaseView,
-  ActionContainer,
+  OutLineButton,
+  PrimaryButton,
 } from 'components';
 import { RootStackParamList } from 'navigations/RootNavigation';
 import i18n from 'translations';

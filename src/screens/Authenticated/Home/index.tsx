@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBaseView, PrimaryText, LogOut } from 'components';
+import { AppBaseView, LogOut, PrimaryText } from 'components';
 import { theme } from 'components/styles/theme';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from 'navigations/RootNavigation';
