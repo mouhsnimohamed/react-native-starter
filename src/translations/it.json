@@ -16,5 +16,6 @@
     },
     "connect": "Se connecter",
     "creatAccount": "Créer un compte"
-  }
+  },
+  "splash": "Bienvenue sur l'application"
 }
