@@ -3,16 +3,16 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import {
+  ActionContainer,
+  AppBaseView,
   Input,
-  PrimaryButton,
   Logo,
   LogoContainer,
-  AppBaseView,
-  SecondaryButton,
   onInputChangeType,
-  StyledKeyboardAwareScrollView,
-  ActionContainer,
+  PrimaryButton,
+  SecondaryButton,
   Spinner,
+  StyledKeyboardAwareScrollView,
 } from 'components';
 import { SignInAction } from 'modules/auth/auth.actions';
 import { SignInPayloadTypes } from 'modules/auth/auth.types';
