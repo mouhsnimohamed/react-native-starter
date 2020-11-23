@@ -1,14 +1,13 @@
 import React, { useRef } from 'react';
 import { TextInput } from 'react-native';
-// import PhoneInput from 'react-native-phone-input';
-// import countriesList from './countries.json';
+import PhoneInput from 'react-native-phone-input';
+import countriesList from './countries.json';
 
 const PhoneInputText = () => {
-  const phoneInputRef = useRef<TextInput | null | undefined>(
+  const phoneInputRef = useRef<PhoneInput<typeof TextInput> | null | undefined>(
     null,
   );
-  // return <PhoneInput initialCountry="fr" countriesList={countriesList} />;
-  return <TextInput />;
+  return <PhoneInput initialCountry="fr" countriesList={countriesList} />;
 };
 
 export default PhoneInputText;
