@@ -27,6 +27,8 @@
     "appcenter-crashes": "3.1.2",
     "axios": "0.21.0",
     "i18n-js": "3.8.0",
+    "metro": "0.56.3",
+    "metro-core": "0.56.3",
     "react": "16.13.1",
     "react-content-loader": "5.1.4",
     "react-native": "0.63.3",
@@ -61,7 +63,7 @@
     "babel-plugin-module-resolver": "4.0.0",
     "eslint": "6.5.1",
     "jest": "25.1.0",
-    "metro-react-native-babel-preset": "0.59.0",
+    "metro-react-native-babel-preset": "0.56.3",
     "prettier": "2.1.2",
     "react-test-renderer": "16.13.1",
     "reactotron-react-native": "5.0.0",
@@ -85,7 +87,6 @@
     "@react-native-community/cli": "^2.6.0",
     "@react-native-community/cli-tools": "^2.8.3",
     "@react-native-community/cli-platform-android": "^2.8.3",
-    "@react-native-community/cli-platform-ios": "^2.8.3",
-    "metro-config": "bluelovers/metro-config-hotfix-0.56.x"
+    "@react-native-community/cli-platform-ios": "^2.8.3"
   }
 }
