@@ -7,6 +7,7 @@ import ActivateAccountScreen from './ActivateAccount';
 import WarningScreen from './WarningScreen';
 
 import { RootStackParamList } from 'navigations/RootNavigation';
+import OnBoarding from './OnBoarding';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -19,10 +20,11 @@ const NotAuthenticatedStackNavigator: React.FC<NotAuthenticatedStackNavigatorPro
 }) => {
   return (
     <Stack.Navigator
-      initialRouteName="Signin"
+      initialRouteName="OnBoarding"
       screenOptions={{
         headerShown: false,
       }}>
+      <Stack.Screen name="OnBoarding" component={OnBoarding} />
       <Stack.Screen
         name="Signin"
         component={Signin}
