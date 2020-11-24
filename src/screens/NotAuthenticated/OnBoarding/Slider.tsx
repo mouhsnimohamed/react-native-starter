@@ -3,8 +3,13 @@ import AppIntroSlider from 'react-native-app-intro-slider';
 import { slides } from './data/slides';
 import React from 'react';
 
+interface DataItem {
+  title: string
+  text: string
+  Image: () => JSX.Element
+}
 const Slider = () => {
-  const renderItem = ({ item }: any) => {
+  const renderItem = ({ item }: {item: DataItem}) => {
     const { Image } = item;
     return (
       <BaseView>

@@ -3,7 +3,11 @@ import PrimaryButton from '../../../components/PrimaryButton';
 import React from 'react';
 import styled from 'styled-components/native';
 
-const Actions = ({ navigateToSignIn, navigateToSignUp }: any) => {
+interface Props {
+  navigateToSignIn: () => void
+  navigateToSignUp: () => void
+}
+const Actions = ({ navigateToSignIn, navigateToSignUp }: Props) => {
   return (
     <BaseView>
       <View style={{ flex: 1, marginRight: 5 }}>
