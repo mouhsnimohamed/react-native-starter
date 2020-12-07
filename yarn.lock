@@ -1397,6 +1397,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.9.tgz#04afc9a25c6ff93da14deabd65dc44485b53c8d6"
   integrity sha512-JsoLXFppG62tWTklIoO4knA+oDTYsmqWxHRvd4lpmfQRNhX6osheUOWETP2jMoV/2bEHuMra8Pp3Dmo/stBFcw==
 
+"@types/node@14.14.9":
+  version "14.14.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.9.tgz#04afc9a25c6ff93da14deabd65dc44485b53c8d6"
+  integrity sha512-JsoLXFppG62tWTklIoO4knA+oDTYsmqWxHRvd4lpmfQRNhX6osheUOWETP2jMoV/2bEHuMra8Pp3Dmo/stBFcw==
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
@@ -5445,10 +5450,10 @@ metro-symbolicate@0.59.0:
     through2 "^2.0.1"
     vlq "^1.0.0"
 
-metro@0.56.3:
-  version "0.56.3"
-  resolved "https://registry.yarnpkg.com/metro/-/metro-0.56.3.tgz#3a38706bf6b1200421e871a4c53ddc2f359f65a9"
-  integrity sha512-mxHpvBGWanZ46wAEZVLinNO5IYMcFbTdMZIRhC7r+rvoSK6r9iPj95AujBfzLXMAl36RI2O3D7yp5hOYif/gEQ==
+metro@0.54.1, metro@^0.54.1:
+  version "0.54.1"
+  resolved "https://registry.yarnpkg.com/metro/-/metro-0.54.1.tgz#a629be00abee5a450a25a8f71c24745f70cc9b44"
+  integrity sha512-6ODPT4mEo4FCpbExRNnQAcZmf1VeNvYOTMj2Na03FjGqhNODHhI2U/wF/Ul5gqTyJ2dVdkXeyvKW3gl/LrnJRg==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/generator" "^7.0.0"
@@ -5477,21 +5482,21 @@ metro@0.56.3:
     json-stable-stringify "^1.0.1"
     lodash.throttle "^4.1.1"
     merge-stream "^1.0.1"
-    metro-babel-register "0.56.3"
-    metro-babel-transformer "0.56.3"
-    metro-cache "0.56.3"
-    metro-config "0.56.3"
-    metro-core "0.56.3"
-    metro-inspector-proxy "0.56.3"
-    metro-minify-uglify "0.56.3"
-    metro-react-native-babel-preset "0.56.3"
-    metro-resolver "0.56.3"
-    metro-source-map "0.56.3"
-    metro-symbolicate "0.56.3"
+    metro-babel-register "0.54.1"
+    metro-babel-transformer "0.54.1"
+    metro-cache "0.54.1"
+    metro-config "0.54.1"
+    metro-core "0.54.1"
+    metro-inspector-proxy "0.54.1"
+    metro-minify-uglify "0.54.1"
+    metro-react-native-babel-preset "0.54.1"
+    metro-resolver "0.54.1"
+    metro-source-map "0.54.1"
     mime-types "2.1.11"
     mkdirp "^0.5.1"
     node-fetch "^2.2.0"
     nullthrows "^1.1.0"
+    react-transform-hmr "^1.0.4"
     resolve "^1.5.0"
     rimraf "^2.5.4"
     serialize-error "^2.1.0"

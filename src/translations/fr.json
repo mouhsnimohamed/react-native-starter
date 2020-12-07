@@ -25,5 +25,8 @@
     "phoneNumber": {
       "placeholder": "N° de téléphone"
     }
+  },
+  "splash": {
+    "title": "Bienvenue sur l'application"
   }
 }

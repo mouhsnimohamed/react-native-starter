@@ -1,14 +1,14 @@
 import React from 'react';
 import { StackNavigationProp } from '@react-navigation/stack';
 import {
+  ActionContainer,
   AppSafeAreaView,
+  Input,
   Logo,
   LogoContainer,
+  onInputChangeType,
   PrimaryButton,
   SecondaryButton,
-  Input,
-  onInputChangeType,
-  ActionContainer,
 } from 'components';
 import { RootStackParamList } from 'navigations/RootNavigation';
 import { ScrollView, Alert } from 'react-native';

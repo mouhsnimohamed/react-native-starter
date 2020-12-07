@@ -17,7 +17,7 @@ const NotAuthenticatedStackNavigator: React.FC<NotAuthenticatedStackNavigatorPro
 }) => {
   return (
     <Stack.Navigator
-      initialRouteName="Signin"
+      initialRouteName="OnBoarding"
       screenOptions={{
         headerShown: false,
       }}>
