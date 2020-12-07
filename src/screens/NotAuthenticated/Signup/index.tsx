@@ -11,7 +11,7 @@ import {
   SecondaryButton,
 } from 'components';
 import { RootStackParamList } from 'navigations/RootNavigation';
-import { ScrollView } from 'react-native';
+import { ScrollView, Alert } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 type SignUpScreenNavigationProp = StackNavigationProp<
@@ -58,7 +58,7 @@ const Signup = ({ navigation }: Props) => {
             <PrimaryButton
               title="Continuer"
               onPress={() => {
-                alert('test');
+                Alert.alert('test');
               }}
             />
             <SecondaryButton

@@ -5,7 +5,6 @@ import SecondaryButton from './SecondaryButton';
 import PrimaryText from './PrimaryText';
 import OutLineButton from './OutLineButton';
 import LogOut from './LogOut';
-import PhoneInputText from './PhoneInput';
 import {
   AppBaseView,
   AppSafeAreaView,
@@ -28,7 +27,6 @@ export {
   StyledKeyboardAwareScrollView,
   ActionContainer,
   LogOut,
-  PhoneInputText,
 };
 
 export type { onInputChangeType };

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
-const logo = require('../assets/images/logo.png');
+const logo = require('../assets/images/rn-logo.png');
 
 const Logo: React.FC = () => <Image source={logo} />;
 

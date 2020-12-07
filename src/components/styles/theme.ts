@@ -10,7 +10,7 @@ const theme: DefaultTheme = {
     massive: 34,
   },
   fontFamily: {
-    primary: 'Segoe UI',
+    primary: 'arial',
     secondary: 'arial',
   },
   colors: {

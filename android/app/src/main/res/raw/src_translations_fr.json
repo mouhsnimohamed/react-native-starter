@@ -21,9 +21,6 @@
     "connect": "Se connecter",
     "register": "M’enregistrer",
     "createAccount": "Créer un nouveau compte",
-    "activateAccount": "Activer mon compte",
-    "phoneNumber": {
-      "placeholder": "N° de téléphone"
-    }
+    "activateAccount": "Activer mon compte"
   }
 }
