@@ -1,20 +1,29 @@
 {
-  "appName": "BMCE Euro Service",
+  "appName": "React native starter",
   "navigation": {
     "home": "Home",
     "settings": "Settings"
+  },
+  "common": {
+    "next": "Suivant",
+    "back": "Retour"
   },
   "home": {
     "welcome": "Welcome to %{appName}!"
   },
   "signin": {
     "password": {
-      "placeholder": "Wachtwoord"
+      "placeholder": "Mot de passe"
     },
     "email": {
-      "placeholder": "Jouw email"
+      "placeholder": "Votre e-mail"
     },
     "connect": "Se connecter",
-    "creatAccount": "Créer un compte"
+    "register": "M’enregistrer",
+    "createAccount": "Créer un nouveau compte",
+    "activateAccount": "Activer mon compte",
+    "phoneNumber": {
+      "placeholder": "N° de téléphone"
+    }
   }
 }

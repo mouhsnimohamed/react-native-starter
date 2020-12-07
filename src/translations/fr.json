@@ -1,5 +1,5 @@
 {
-  "appName": "BMCE Euro Service",
+  "appName": "React native starter",
   "navigation": {
     "home": "Home",
     "settings": "Settings"
