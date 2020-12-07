@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components/native';
-import { PrimaryButton } from '.';
+import { PrimaryButton } from './index';
 import { SignOutAction } from '../modules/auth/auth.actions';
 
 export default function LogOut() {

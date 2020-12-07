@@ -10,7 +10,7 @@ const theme: DefaultTheme = {
     massive: 34,
   },
   fontFamily: {
-    primary: 'Open Sans',
+    primary: 'arial',
     secondary: 'arial',
   },
   colors: {
