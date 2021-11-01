@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RefreshButton /> render RefreshButton correctly 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 10,
+    }
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={27}
+    bbWidth={27}
+    fill="none"
+    focusable={false}
+    height={27}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        Object {
+          "flex": 0,
+          "height": 27,
+          "width": 27,
+        },
+      ]
+    }
+    vbHeight={27}
+    vbWidth={27}
+    width={27}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <RNSVGGroup
+      fill={null}
+      propList={
+        Array [
+          "fill",
+        ]
+      }
+    >
+      <RNSVGPath
+        d="M2.96 6.522h-.001l-.006.01a3.547 3.547 0 00-.127.252v-3.42H.861V10.328H7.823V8.36H4.159a10.825 10.825 0 019.343-5.612 10.817 10.817 0 0110.232 7.704l.043.143.143-.042 1.6-.475.143-.043-.043-.143C23.631 3.2 16.594-.612 9.902 1.377a12.64 12.64 0 00-6.943 5.145zM19.33 16.688h-.15V18.654h3.663a10.825 10.825 0 01-9.343 5.612 10.817 10.817 0 01-10.232-7.704l-.043-.143-.143.042-1.6.475-.143.043.043.144c1.997 6.69 9.04 10.493 15.73 8.495a12.64 12.64 0 007.063-5.352v3.384H26.141V16.688h-6.812z"
+        fill={4294967295}
+        propList={
+          Array [
+            "fill",
+            "stroke",
+            "strokeWidth",
+          ]
+        }
+        stroke={4294967295}
+        strokeWidth={0.3}
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
+`;

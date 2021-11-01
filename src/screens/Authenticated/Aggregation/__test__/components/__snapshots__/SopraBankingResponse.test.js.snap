@@ -1,0 +1,442 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SopraBankingResponse /> render SopraBankingResponse with error message 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+    ]
+  }
+>
+  <View
+    justifyContent="flex-end"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "flexBasis": 0,
+          "flexDirection": "column",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "flex-end",
+          "paddingBottom": 25,
+          "paddingLeft": 25,
+          "paddingRight": 25,
+          "paddingTop": 25,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "height": "62%",
+            "justifyContent": "space-between",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "column",
+              "marginBottom": 40,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "marginBottom": 18,
+              },
+            ]
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight={78}
+            bbWidth={78}
+            fill="none"
+            focusable={false}
+            height={78}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                Object {
+                  "flex": 0,
+                  "height": 78,
+                  "width": 78,
+                },
+              ]
+            }
+            vbHeight={78}
+            vbWidth={78}
+            width={78}
+          >
+            <RNSVGGroup
+              fill={null}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                d="M39 0C17.496 0 0 17.496 0 39s17.496 39 39 39 39-17.496 39-39S60.504 0 39 0zm0 74.75C19.287 74.75 3.25 58.713 3.25 39S19.287 3.25 39 3.25 74.75 19.287 74.75 39 58.713 74.75 39 74.75z"
+                fill={4292622360}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+              />
+              <RNSVGPath
+                d="M54.774 23.226a1.624 1.624 0 00-2.298 0L39 36.702 25.524 23.226a1.624 1.624 0 10-2.298 2.298L36.702 39 23.226 52.476a1.624 1.624 0 102.298 2.298L39 41.298l13.476 13.476a1.62 1.62 0 002.298 0 1.624 1.624 0 000-2.298L41.298 39l13.476-13.476a1.625 1.625 0 000-2.298z"
+                fill={4292622360}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+        <Text
+          isError={true}
+          semiBold={true}
+          style={
+            Array [
+              Object {
+                "color": "#DC3818",
+                "flexShrink": 1,
+                "fontFamily": "Segoe UI",
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "center",
+                "textDecorationColor": "black",
+                "textDecorationLine": "none",
+                "textDecorationStyle": "solid",
+                "textTransform": "none",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          Error title
+        </Text>
+      </View>
+      <View
+        mBottom={0}
+        mTop={0}
+        style={
+          Array [
+            Object {
+              "alignSelf": "stretch",
+              "marginBottom": 0,
+              "marginTop": 0,
+            },
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#003D7C",
+                  "borderColor": "black",
+                  "borderRadius": 5,
+                  "borderStyle": "solid",
+                  "borderWidth": 0,
+                  "flexDirection": "row",
+                  "height": 44,
+                  "justifyContent": "center",
+                  "marginBottom": 10,
+                  "opacity": 1,
+                },
+              ]
+            }
+            variant="default"
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "Segoe UI",
+                    "fontSize": 16,
+                    "paddingBottom": 10,
+                    "paddingLeft": 15,
+                    "paddingRight": 15,
+                    "paddingTop": 10,
+                    "textAlign": "center",
+                  },
+                ]
+              }
+              variant="default"
+            >
+              Retry
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`<SopraBankingResponse /> render SopraBankingResponse with success message 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+    ]
+  }
+>
+  <View
+    justifyContent="flex-end"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "flexBasis": 0,
+          "flexDirection": "column",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "flex-end",
+          "paddingBottom": 25,
+          "paddingLeft": 25,
+          "paddingRight": 25,
+          "paddingTop": 25,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "height": "62%",
+            "justifyContent": "space-between",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "column",
+              "marginBottom": 40,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "marginBottom": 18,
+              },
+            ]
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight={81}
+            bbWidth={81}
+            fill="none"
+            focusable={false}
+            height={81}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                Object {
+                  "flex": 0,
+                  "height": 81,
+                  "width": 81,
+                },
+              ]
+            }
+            vbHeight={81}
+            vbWidth={81}
+            width={81}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <RNSVGGroup
+              fill={null}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                d="M37.65 55.051c-.915 0-1.73-.407-2.238-1.017L20.047 37.345c-1.12-1.22-1.018-3.154.203-4.273 1.221-1.12 3.154-1.018 4.274.203l13.228 14.348 36.634-36.531c1.22-1.221 3.154-1.221 4.274 0 1.119 1.22 1.22 3.154 0 4.274l-38.872 38.77c-.51.61-1.323.915-2.137.915z"
+                fill={4278233343}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+              />
+              <RNSVGPath
+                d="M40.5 81C18.215 81 0 62.785 0 40.5S18.215 0 40.5 0c1.73 0 3.053 1.323 3.053 3.053S42.23 6.105 40.5 6.105C21.573 6.105 6.106 21.573 6.106 40.5c0 18.927 15.467 34.394 34.394 34.394S74.895 59.427 74.895 40.5c0-1.73 1.323-3.053 3.052-3.053 1.73 0 3.053 1.323 3.053 3.053C81 62.785 62.785 81 40.5 81z"
+                fill={4278205820}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+        <Text
+          isSecondary={true}
+          semiBold={true}
+          style={
+            Array [
+              Object {
+                "color": "#00A8FF",
+                "flexShrink": 1,
+                "fontFamily": "Segoe UI",
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "center",
+                "textDecorationColor": "black",
+                "textDecorationLine": "none",
+                "textDecorationStyle": "solid",
+                "textTransform": "none",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          Success title
+        </Text>
+      </View>
+      <View
+        mBottom={0}
+        mTop={0}
+        style={
+          Array [
+            Object {
+              "alignSelf": "stretch",
+              "marginBottom": 0,
+              "marginTop": 0,
+            },
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#003D7C",
+                  "borderColor": "black",
+                  "borderRadius": 5,
+                  "borderStyle": "solid",
+                  "borderWidth": 0,
+                  "flexDirection": "row",
+                  "height": 44,
+                  "justifyContent": "center",
+                  "marginBottom": 10,
+                  "opacity": 1,
+                },
+              ]
+            }
+            variant="default"
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "Segoe UI",
+                    "fontSize": 16,
+                    "paddingBottom": 10,
+                    "paddingLeft": 15,
+                    "paddingRight": 15,
+                    "paddingTop": 10,
+                    "textAlign": "center",
+                  },
+                ]
+              }
+              variant="default"
+            >
+              Close
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
