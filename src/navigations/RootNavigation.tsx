@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import {
   NavigationContainer,
   NavigationContainerRef,
-} from '@react-navigation/native';
-import { useDispatch } from 'react-redux';
-import { useTypedSelector } from '../redux/root.reducers';
-import { AUTH_REDUCER } from 'modules/auth/auth.reducer';
-import AuthTabNavigator from 'screens/Authenticated/bottom-tab-navigator';
-import NotAuthenticatedStackNavigator from 'screens/NotAuthenticated/stack-navigator';
-import { CheckAuthAction } from 'modules/auth/auth.actions';
-import SplashScreen from 'screens/SplashScreen';
+} from "@react-navigation/native";
+import { useDispatch } from "react-redux";
+import { useTypedSelector } from "../redux/root.reducers";
+import { AUTH_REDUCER } from "modules/auth/auth.reducer";
+import AuthTabNavigator from "screens/Authenticated/bottom-tab-navigator";
+import NotAuthenticatedStackNavigator from "screens/NotAuthenticated/stack-navigator";
+import { CheckAuthAction } from "modules/auth/auth.actions";
+import SplashScreen from "screens/SplashScreen";
 
 export type RootStackParamList = {
   Home: undefined;
@@ -25,14 +25,13 @@ export type RootStackParamList = {
 };
 
 /* create navigation => needed in redux action */
-const navigationRef: React.RefObject<
-  NavigationContainerRef
-> | null = React.createRef();
+const navigationRef: React.RefObject<NavigationContainerRef> | null =
+  React.createRef();
 
 const NavigatorView: React.FC = () => {
   const dispatch = useDispatch();
   const { isSignedIn, isSigningOut, isChecking } = useTypedSelector(
-    (state) => state[AUTH_REDUCER],
+    (state) => state[AUTH_REDUCER]
   );
 
   useEffect(() => {
