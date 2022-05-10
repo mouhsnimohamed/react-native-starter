@@ -17,7 +17,6 @@ module.exports = {
           ".json",
         ],
         alias: {
-          redux: "./src/redux",
           screens: "./src/screens",
           navigations: "./src/navigations",
           components: "./src/components",

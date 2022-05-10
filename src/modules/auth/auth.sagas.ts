@@ -5,27 +5,27 @@ import {
   SignInSuccessAction,
   SignOutSuccessAction,
   STORAGE_KEYS,
-} from './auth.actions';
-import { takeLatest, put, call, delay } from 'redux-saga/effects';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { SignInActionType } from './auth.types';
-import { navigate } from 'navigations/RootNavigation';
-import request from '../request';
-import { LOGIN_URL } from '../request/api_constants';
+} from "./auth.actions";
+import { takeLatest, put, call, delay } from "redux-saga/effects";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { SignInActionType } from "./auth.types";
+import { navigate } from "navigations/RootNavigation";
+import request from "../request";
+import { LOGIN_URL } from "../request/api_constants";
 
 function* handleSignIn(token: string) {
   try {
     yield AsyncStorage.setItem(STORAGE_KEYS.TOKEN, token);
     yield put(SignInSuccessAction(token));
   } catch (error) {
-    console.log('cant store token ', error);
+    console.log("cant store token ", error);
   }
 }
 
 function* CheckAuthSaga() {
   try {
-    yield delay(10000);
-    const token = yield AsyncStorage.getItem(STORAGE_KEYS.TOKEN);
+    yield delay(2000);
+    const token: string | null = yield AsyncStorage.getItem(STORAGE_KEYS.TOKEN);
     if (token === null) {
       yield put(HandleSplashAction(false));
     } else {
@@ -34,7 +34,7 @@ function* CheckAuthSaga() {
       yield put(SignInSuccessAction(token));
     }
   } catch (error) {
-    console.log('somthing went wrong', error);
+    console.log("somthing went wrong", error);
   }
 }
 
@@ -45,27 +45,27 @@ function* WatchCheckAuth() {
 function* SigninSaga(action: SignInActionType) {
   try {
     if (
-      action.payload.email.toLowerCase() !== 'test@test.com' ||
-      action.payload.password.toLowerCase() !== '000000'
+      action.payload.email.toLowerCase() !== "test@test.com" ||
+      action.payload.password.toLowerCase() !== "000000"
     ) {
       /*
         ? Remove loader and rediredt to warning screen
       */
       yield put(SignInFailerAction());
-      navigate('Warning');
+      navigate("Warning");
     } else {
-      console.log('############# REQUEST ');
+      console.log("############# REQUEST ");
       const result = yield call(request, {
         url: LOGIN_URL,
-        method: 'POST',
+        method: "POST",
         data: action.payload,
       });
       // set user authonticated
-      console.log('############# RESULT ', result.data);
-      yield handleSignIn('USER_FAKE_TOKEN');
+      console.log("############# RESULT ", result.data);
+      yield handleSignIn("USER_FAKE_TOKEN");
     }
   } catch (error) {
-    console.log('somthing went wrong......', error);
+    console.log("somthing went wrong......", error);
     yield SignInFailerAction();
   }
 }
